@@ -6,6 +6,7 @@ angular.module("Shroomy", [])
      shroomyFactory.getMushrooms()
         .then(function (data) {
             console.log('data', data);
+            $scope.mushrooms = data;
         }).catch(function (error) {
             console.log('error', error);
         });

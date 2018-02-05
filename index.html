@@ -8,12 +8,12 @@
 </head>
 <body ng-app="Shroomy">
     <div>
-        <input type="text">
-        <button type="radio">Poisonous</button>
-        <button type="radio">Non-poisonous</button>
+        <input type="text" ng-model="userSearch">
+        <button type="radio" name="edible"ng-model="poisonous">Poisonous</button>
+        <button type="radio" name="edible" ng-model="nonPoisonous">Non-poisonous</button>
     </div>
     <div ng-controller="shroomyCtrl">
-        <div ng-repeat="mushroom in mushrooms">
+        <div ng-repeat="mushroom in mushrooms | filter: userSearch">
             <h1>
                 Name:{{mushroom.name}}
             </h1>
