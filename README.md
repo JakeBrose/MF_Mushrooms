@@ -15,5 +15,5 @@ Additional Requirements
     TODO: Define a controller in the app. This controller should load the JSON using the $http function
     TODO: Use one partial that is bound to the controller
     TODO: Use the ng-repeat(with filter) and ng-click directives.
-    TODO: Load the JSON file into firebase
+    TODO: Load the JSON file into firebase-check
     
