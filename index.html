@@ -9,17 +9,19 @@
 <body ng-app="Shroomy">
     <div>
         <input type="text" ng-model="userSearch">
-        <button type="radio" name="edible"ng-model="poisonous">Poisonous</button>
-        <button type="radio" name="edible" ng-model="nonPoisonous">Non-poisonous</button>
+        <input type="radio" name="edible" value= false ng-model="eatable">Poisonous</input>
+        <input type="radio" name="edible" value= true ng-model="eatable">Non-poisonous</input>
     </div>
     <div ng-controller="shroomyCtrl">
-        <div ng-repeat="mushroom in mushrooms | filter: userSearch">
-            <h1>
-                Name:{{mushroom.name}}
-            </h1>
-            <h2>
-                Description:{{mushroom.description}}
-            </h2>
+        <div ng-repeat="mushroom in mushrooms | filter: userSearch" ng-show="mushroom.edible.toString() == eatable">
+            <div> 
+                <h1>
+                    Name:{{mushroom.name}}
+                </h1>
+                <h2>
+                    Description:{{mushroom.description}}
+                </h2>
+            </div>
         </div>
     </div>
     
